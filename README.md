@@ -5,7 +5,6 @@ This repo is now set up around one local training flow on both operating systems
 - Ollama for model management and chat
 - llama.cpp for local fine-tuning
 - JSONL datasets in `datasets/`
-- scraped source data in `datasets/scraped/`
 
 ## Fast Start
 
