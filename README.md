@@ -24,6 +24,8 @@ Windows PowerShell:
 .\.venv\Scripts\Activate.ps1
 python .\run_gmod_ai_studio.py
 ```
+Browser Url (When Running):
+http://127.0.0.1/gmodai.html
 
 ## What The Setup Scripts Do
 
@@ -78,30 +80,6 @@ Default generated files:
 - `datasets/gmod_lua_quickstart_eval.jsonl`
 
 If you add your own `*_train.jsonl` and `*_eval.jsonl` files to `datasets/`, they show up in the Studio dropdown automatically.
-
-## Scraped Website Data
-
-The scraper files now live in `scrape website data/`.
-
-Windows batch entrypoint:
-
-```bat
-scrape website data\scrape_facepunch_gmod.bat
-```
-
-PowerShell entrypoint:
-
-```powershell
-.\scrape website data\scrape_facepunch_gmod.ps1
-```
-
-By default, the scraper writes JSON into:
-
-```text
-datasets/scraped/
-```
-
-Any scraped JSON files in that folder are picked up by `scripts/prepare_training_data.py` the next time you rebuild datasets.
 
 ## Optional Manual Commands
 
