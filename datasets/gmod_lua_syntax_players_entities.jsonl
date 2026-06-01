@@ -1,0 +1,10 @@
+{"question":"How do you get the player entity in a hook?","answer":"Use the ply argument passed to the hook. Example:\nhook.Add(\"PlayerSay\", \"ChatHook\", function(ply, text)\n  print(ply:Nick())\nend)"}
+{"question":"How do you check if an entity is valid?","answer":"Use IsValid(entity). Example:\nif IsValid(ent) then\n  print(ent:GetClass())\nend"}
+{"question":"How do you find entities by class in Garry's Mod?","answer":"Use ents.FindByClass(\"classname\"). Example:\nfor _, ent in ipairs(ents.FindByClass(\"npc_*\")) do\n  print(ent:GetName())\nend"}
+{"question":"How do you access a player's SteamID in Garry's Mod Lua?","answer":"Use ply:SteamID() or ply:SteamID64(). Example:\nprint(ply:SteamID())"}
+{"question":"How do you use player methods like SetHealth and GetPos?","answer":"Call them on the player object. Example:\nply:SetHealth(100)\nlocal pos = ply:GetPos()"}
+{"question":"How do you set an entity's model in Lua?","answer":"Use ent:SetModel(\"modelpath\"). Example:\nent:SetModel(\"models/props_c17/oildrum001.mdl\")"}
+{"question":"How do you add a collision group to an entity?","answer":"Use ent:SetCollisionGroup. Example:\nent:SetCollisionGroup(COLLISION_GROUP_DEBRIS)"}
+{"question":"How do you create a physics object for an entity?","answer":"Call self:PhysicsInit(SOLID_VPHYSICS) and use physics object methods. Example:\nlocal phys = self:GetPhysicsObject()\nif IsValid(phys) then phys:Wake() end"}
+{"question":"How do you spawn an entity server-side?","answer":"Use ents.Create and ent:Spawn(). Example:\nlocal npc = ents.Create(\"npc_citizen\")\nnpc:SetPos(pos)\nnpc:Spawn()"}
+{"question":"How do you set player speed in Garry's Mod?","answer":"Use ply:SetWalkSpeed and ply:SetRunSpeed. Example:\nply:SetWalkSpeed(200)\nply:SetRunSpeed(400)"}

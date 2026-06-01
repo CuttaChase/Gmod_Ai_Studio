@@ -1,0 +1,10 @@
+{"question":"How do you define an anonymous function in Lua?","answer":"Use function(...) ... end without naming it. Example:\nlocal fn = function(a, b) return a + b end"}
+{"question":"How do you write a function with variable arguments?","answer":"Use ... and arg or select. Example:\nfunction Log(...)\n  local args = {...}\n  print(table.concat(args, \", \"))\nend"}
+{"question":"How do you create a closure in Lua?","answer":"Return an inner function that references outer variables. Example:\nfunction Counter()\n  local count = 0\n  return function()\n    count = count + 1\n    return count\n  end\nend"}
+{"question":"How do you pass functions as callback arguments?","answer":"Pass the function reference. Example:\nhook.Add(\"Think\", \"MyThink\", function() print(\"tick\") end)"}
+{"question":"How do you use local functions inside a table?","answer":"Assign functions to table fields. Example:\nlocal tool = {}\nfunction tool:Activate()\n  print(\"activate\")\nend"}
+{"question":"How do you return nil from a Lua function?","answer":"Use return with no value or return nil. Example:\nfunction GetOwner()\n  return nil\nend"}
+{"question":"How do you use multiple return values in function calls?","answer":"Capture with multiple variables. Example:\nlocal x, y = GetPos()"}
+{"question":"How do you create recursive functions in Lua?","answer":"Call the function by name from within itself. Example:\nfunction Factorial(n)\n  if n <= 1 then return 1 end\n  return n * Factorial(n - 1)\nend"}
+{"question":"How do you alias a function in Lua?","answer":"Assign it to another local variable. Example:\nlocal printInfo = print\nprintInfo(\"Hello\")"}
+{"question":"How do you use metamethods to make a function callable?","answer":"Define __call in a metatable. Example:\nlocal mt = {__call = function(self, ...) return self.fn(...) end}\nsetmetatable(obj, mt)"}

@@ -1,0 +1,10 @@
+{"question":"How do you register a network string in Garry's Mod?","answer":"Call util.AddNetworkString on the server. Example:\nif SERVER then util.AddNetworkString(\"MyNetMessage\") end"}
+{"question":"How do you send a network message from the server?","answer":"Use net.Start, net.Write*, and net.Send. Example:\nnet.Start(\"MyNetMessage\")\nnet.WriteString(\"hello\")\nnet.Send(ply)"}
+{"question":"How do you receive a network message on the client?","answer":"Use net.Receive. Example:\nnet.Receive(\"MyNetMessage\", function()\n  local text = net.ReadString()\n  print(text)\nend)"}
+{"question":"How do you broadcast a net message to all players?","answer":"Use net.Broadcast. Example:\nnet.Start(\"MyNetMessage\")\nnet.WriteBool(true)\nnet.Broadcast()"}
+{"question":"How do you send a table over net messages?","answer":"Use net.WriteTable and net.ReadTable. Example:\nnet.WriteTable({x=1, y=2})\n...\nlocal data = net.ReadTable()"}
+{"question":"How do you send a net message from the client to the server?","answer":"Call net.Start, write data, and net.SendToServer. Example:\nnet.Start(\"ClientToServer\")\nnet.WriteInt(5, 32)\nnet.SendToServer()"}
+{"question":"How do you use networked variables in entities?","answer":"Define them with self:NetworkVar in ENT:SetupDataTables. Example:\nself:NetworkVar(\"Bool\", 0, \"Active\")"}
+{"question":"How do you create a reliable net message?","answer":"Net messages are reliable by default. Use net.Start and net.Send / net.SendToServer as usual."}
+{"question":"How do you use net.WriteEntity and net.ReadEntity?","answer":"Write entity handles to the stream. Example:\nnet.WriteEntity(ent)\nlocal ent = net.ReadEntity()"}
+{"question":"How do you check net message size limits?","answer":"Large data can be split or compressed. Use util.Compress / util.Decompress for large strings, or avoid sending huge tables."}

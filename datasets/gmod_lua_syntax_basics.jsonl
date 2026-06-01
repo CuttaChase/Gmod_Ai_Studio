@@ -1,0 +1,10 @@
+{"question":"What does a Lua local variable declaration look like?","answer":"Use local before the name. Example:\nlocal health = 100\nlocal playerName = \"player\""}
+{"question":"How do you write comments in Lua?","answer":"Single-line comments use --. Multi-line comments use --[[ ... ]]. Example:\n-- This is a single-line comment\n--[[\nThis is a multi-line comment\n]]"}
+{"question":"How are strings represented in Lua?","answer":"Strings can be wrapped in single or double quotes, and longer strings can use [[ ]]. Example:\nlocal s1 = \"hello\"\nlocal s2 = 'world'\nlocal s3 = [[multi-line string]]"}
+{"question":"How do you concatenate strings in Lua?","answer":"Use the .. operator. Example:\nlocal a = \"GMod\"\nlocal b = \"Lua\"\nlocal combined = a .. \" \" .. b"}
+{"question":"What are the basic Lua data types?","answer":"Lua includes nil, boolean, number, string, table, function, thread, and userdata. Garry's Mod uses these plus special Entity and Player userdata types."}
+{"question":"How do you check a variable type in Lua?","answer":"Use the type() function. Example:\nlocal x = 10\nprint(type(x)) -- \"number\"\nprint(type(nil)) -- \"nil\""}
+{"question":"How do you create a table in Lua?","answer":"Use curly braces. Example:\nlocal t = {1, 2, 3}\nlocal info = {name = \"NPC\", health = 100}"}
+{"question":"How do you index a Lua table?","answer":"Use dot notation for identifiers or brackets for keys. Example:\nlocal ply = {Name = \"Alice\"}\nprint(ply.Name)\nprint(ply[\"Name\"])"}
+{"question":"How do you define a function in Lua?","answer":"Use function ... end. Example:\nfunction Add(a, b)\n  return a + b\nend\n\nlocal function Multiply(a, b)\n  return a * b\nend"}
+{"question":"How do you return multiple values from a Lua function?","answer":"Separate values with commas. Example:\nfunction GetPos()\n  return x, y, z\nend\nlocal px, py, pz = GetPos()"}

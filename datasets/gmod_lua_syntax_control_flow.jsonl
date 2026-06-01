@@ -1,0 +1,10 @@
+{"question":"How do you write an if statement in Lua?","answer":"Use if, then, elseif, else, and end. Example:\nif health <= 0 then\n  print(\"dead\")\nelseif health < 50 then\n  print(\"hurt\")\nelse\n  print(\"healthy\")\nend"}
+{"question":"How do you write a numeric for loop in Lua?","answer":"Use for i = start, stop, step do. Example:\nfor i = 1, 10 do\n  print(i)\nend\nfor i = 10, 1, -1 do\n  print(i)\nend"}
+{"question":"How do you iterate over a table with pairs in Lua?","answer":"Use for k, v in pairs(tbl) do. Example:\nfor k, v in pairs(playerData) do\n  print(k, v)\nend"}
+{"question":"How do you iterate over an array-like table with ipairs in Lua?","answer":"Use for i, v in ipairs(tbl) do. Example:\nfor i, weapon in ipairs(weapons) do\n  print(i, weapon)\nend"}
+{"question":"How do you write a while loop in Lua?","answer":"Use while condition do ... end. Example:\nwhile ammo > 0 do\n  reload()\n  ammo = ammo - 1\nend"}
+{"question":"How do you write a repeat-until loop in Lua?","answer":"Use repeat ... until condition. Example:\nrepeat\n  attack()\nuntil enemy:IsDead()"}
+{"question":"How do you use logical operators in Lua?","answer":"Use and, or, not. Example:\nif isAdmin and not isBanned then\n  allowAccess()\nend"}
+{"question":"How do you write a ternary-style expression in Lua?","answer":"Use and/or short-circuit logic. Example:\nlocal status = isAlive and \"alive\" or \"dead\""}
+{"question":"How do you break out of a loop in Lua?","answer":"Use the break keyword. Example:\nfor i = 1, 10 do\n  if Found() then\n    break\n  end\nend"}
+{"question":"How do you continue to the next loop iteration in Lua?","answer":"Lua does not have continue built in. Use nested if logic or goto. Example:\nfor i = 1, 10 do\n  if skip[i] then\n    goto continue\n  end\n  process(i)\n  ::continue::\nend"}

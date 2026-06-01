@@ -1,0 +1,10 @@
+{"question":"How do you construct an empty table in Lua?","answer":"Use {}. Example:\nlocal t = {}\nlocal playerInfo = {}"}
+{"question":"What is a metatable in Lua?","answer":"A metatable is a table attached to another table that can override behavior with metamethods like __index, __newindex, __add, and __tostring."}
+{"question":"How do you set a metatable on a table?","answer":"Use setmetatable(tbl, metatable). Example:\nlocal mt = {__index = function(t, k) return \"missing\" end}\nsetmetatable(myTable, mt)"}
+{"question":"How do you implement default lookup behavior with __index?","answer":"Use __index in the metatable to return fallback values or proxy table keys. Example:\nlocal defaults = {speed = 250}\nsetmetatable(playerData, {__index = defaults})"}
+{"question":"How do you overload the addition operator on tables?","answer":"Define __add in the metatable. Example:\nlocal mt = {__add = function(a, b) return a.x + b.x end}\nsetmetatable(vec1, mt)"}
+{"question":"How do you control string conversion using __tostring?","answer":"Define __tostring in the metatable. Example:\nlocal mt = {__tostring = function(v) return v.name end}\nsetmetatable(obj, mt)"}
+{"question":"How do you protect a table from new keys with __newindex?","answer":"Define __newindex to intercept writes. Example:\nlocal proxy = {}\nsetmetatable(proxy, {__newindex = function(t, k, v) error(\"Cannot assign\") end})"}
+{"question":"How do you copy a table shallowly in Lua?","answer":"Loop over pairs and assign to a new table. Example:\nlocal copy = {}\nfor k, v in pairs(orig) do\n  copy[k] = v\nend"}
+{"question":"How do you merge tables in Lua?","answer":"Copy keys from one or more source tables into a destination table. Example:\nfor k, v in pairs(source) do\n  dest[k] = v\nend"}
+{"question":"How do you create a table with numeric and string keys?","answer":"Use both forms. Example:\nlocal t = {1, 2, name = \"NPC\", health = 100}"}
