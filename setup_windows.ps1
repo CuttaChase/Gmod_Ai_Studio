@@ -136,7 +136,7 @@ chat = settings.setdefault('chat', {})
 dataset = settings.setdefault('dataset', {})
 training = settings.setdefault('training', {})
 
-app.setdefault('host', '127.0.0.1')
+app.setdefault('host', '0.0.0.0')
 app.setdefault('port', 8765)
 app.setdefault('auto_open_browser', True)
 app.setdefault('poll_interval_ms', 2500)
