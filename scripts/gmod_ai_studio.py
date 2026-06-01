@@ -104,7 +104,7 @@ DEFAULT_MAC_MLX_MODEL = "mlx-community/Llama-3.2-1B-Instruct-4bit"
 
 DEFAULT_SETTINGS = {
     "app": {
-        "host": "127.0.0.1",
+    "host": "0.0.0.0",
         "port": 8765,
         "auto_open_browser": True,
         "poll_interval_ms": 2500,
@@ -4123,7 +4123,7 @@ class StudioHandler(BaseHTTPRequestHandler):
 
     def do_GET(self):
         parsed = urlparse(self.path)
-        if parsed.path == "/":
+        if parsed.path in {"/", "/gmodai.html"}:
             self._send_html(INDEX_HTML)
             return
         if parsed.path == "/api/state":
