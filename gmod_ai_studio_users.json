@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "username": "cutta",
+      "role": "admin",
+      "salt": "c5d6b9e057acbb4feec0e536c9db5336",
+      "password_hash": "3a7b39b070d8e15cf84f6025fb2c49cb451903cefe4c501cc0806186b0e76788"
+    },
+    {
+      "username": "knuckles",
+      "role": "admin",
+      "salt": "1d39cd0d5663ee08751e453c62d95c2f",
+      "password_hash": "99ec29d6b6c979ec2b35137563b899a920e1b0bb808bf78d625cdde1635c96cf"
+    }
+  ]
+}

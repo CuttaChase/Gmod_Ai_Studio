@@ -1,0 +1,69 @@
+{
+  "app": {
+    "host": "127.0.0.1",
+    "port": 8765,
+    "auto_open_browser": true,
+    "poll_interval_ms": 2500
+  },
+  "chat": {
+    "model": "qwen2.5-coder:1.5b",
+    "memory_file": "training_runs/chat_memory/session_memory.json",
+    "training_log_file": "output/chat_memory_train.jsonl",
+    "messages_log_file": "output/chat_memory_messages.jsonl",
+    "max_history_messages": 100,
+    "temperature": 0.5,
+    "seed": 3407,
+    "timeout": 3000.0,
+    "num_predict": 500000,
+    "enable_thinking": true,
+    "device": "auto"
+  },
+  "dataset": {
+    "script": "scripts/prepare_training_data.py",
+    "extra_args": ""
+  },
+  "training": {
+    "script": "scripts/train_llamacpp_ollama_windows.py",
+    "platform": "windows",
+    "dataset_file": "datasets/gmod_lua_coding_train.jsonl",
+    "dataset_files": [
+      "datasets/gmod_lua_coding_train.jsonl"
+    ],
+    "eval_file": "datasets/gmod_lua_coding_eval.jsonl",
+    "mlx_model": "",
+    "base_model_gguf": "E:\\gmod ai studio\\models\\base\\Qwen2.5-Coder-1.5B-Instruct-Q4_K_M.gguf",
+    "base_ollama_model": "qwen2.5-coder:1.5b",
+    "output_dir": "training_runs/llama_gmod_training_v2",
+    "export_model_bundle": true,
+    "export_model_dir": "models",
+    "memory_dataset_file": "output/chat_memory_train.jsonl",
+    "skip_memory_dataset": false,
+    "limit": 10000,
+    "offset": 0,
+    "context_length": 1024,
+    "batch_size": 2,
+    "ubatch_size": 16,
+    "epochs": 1,
+    "iters": 40,
+    "grad_accumulation_steps": 2,
+    "num_layers": 4,
+    "steps_per_report": 1,
+    "steps_per_eval": 10,
+    "val_batches": 1,
+    "save_every": 10,
+    "gpu_layers": 0,
+    "threads": 6,
+    "seed": 3407,
+    "validation_split": 0.1,
+    "windows_acceleration": "auto",
+    "mac_acceleration": "auto",
+    "llama_bin_dir": "C:\\Users\\Cutta\\llama.cpp\\build\\bin\\Release",
+    "prepare_only": false,
+    "create_ollama_model": false,
+    "ollama_model_name": "gmod_lua_new",
+    "grad_checkpoint": true,
+    "mask_prompt": true,
+    "dry_run": false,
+    "extra_args": ""
+  }
+}
